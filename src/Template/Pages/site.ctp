@@ -640,7 +640,7 @@
                                                     <div class="eltdf-separator"></div>
                                                 </div>
                                                 <p class="eltdf-st-text" style="color: #bbbbbc">
-                                                    Everything You Want to Know </p>
+                                                    Tudo o que voce precisa saber </p>
                                             </div>
                                         </div>
                                         <div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1519733086577">
@@ -649,36 +649,36 @@
                                                     <div class="wpb_wrapper">
                                                         <div class="eltdf-progress-bar ">
                                                             <h6 class="eltdf-pb-title-holder" style="color: #ffffff">
-                                                                <span class="eltdf-pb-title">Gastronomy Skills</span>
+                                                                <span class="eltdf-pb-title">Clientes Satisfeitos</span>
                                                                 <span class="eltdf-pb-percent">0</span>
                                                             </h6>
                                                             <div class="eltdf-pb-content-holder"
                                                                  style="background-color: rgba(197,179,88,0.3)">
-                                                                <div data-percentage=76 class="eltdf-pb-content"></div>
+                                                                <div data-percentage=99 class="eltdf-pb-content"></div>
                                                             </div>
                                                         </div>
                                                         <div class="vc_empty_space" style="height: 14px"><span
                                                                     class="vc_empty_space_inner"></span></div>
                                                         <div class="eltdf-progress-bar ">
                                                             <h6 class="eltdf-pb-title-holder" style="color: #ffffff">
-                                                                <span class="eltdf-pb-title">Creativity Skills</span>
+                                                                <span class="eltdf-pb-title">Trabalho em Equipe</span>
                                                                 <span class="eltdf-pb-percent">0</span>
                                                             </h6>
                                                             <div class="eltdf-pb-content-holder"
                                                                  style="background-color: rgba(197,179,88,0.3)">
-                                                                <div data-percentage=44 class="eltdf-pb-content"></div>
+                                                                <div data-percentage=100 class="eltdf-pb-content"></div>
                                                             </div>
                                                         </div>
                                                         <div class="vc_empty_space" style="height: 14px"><span
                                                                     class="vc_empty_space_inner"></span></div>
                                                         <div class="eltdf-progress-bar ">
                                                             <h6 class="eltdf-pb-title-holder" style="color: #ffffff">
-                                                                <span class="eltdf-pb-title">Culinary Skills</span>
+                                                                <span class="eltdf-pb-title">Quantidade de Garços Atendidos</span>
                                                                 <span class="eltdf-pb-percent">0</span>
                                                             </h6>
                                                             <div class="eltdf-pb-content-holder"
                                                                  style="background-color: rgba(197,179,88,0.3)">
-                                                                <div data-percentage=65 class="eltdf-pb-content"></div>
+                                                                <div data-percentage=40 class="eltdf-pb-content"></div>
                                                             </div>
                                                         </div>
                                                         <div class="vc_empty_space" style="height: 65px"><span
