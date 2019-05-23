@@ -20,7 +20,6 @@
                   <th scope="col"><?= $this->Paginator->sort('title', ['label' => 'Titulo']) ?></th>
                   <th scope="col"><?= $this->Paginator->sort('body', ['label' => 'Texto']) ?></th>
                   <th scope="col"><?= $this->Paginator->sort('photo', ['label' => 'Imagem']) ?></th>
-                  <th scope="col"><?= $this->Paginator->sort('created', ['label' => 'Criado em:']) ?></th>
                   <th scope="col" class="actions text-center"><?= __('Ações') ?></th>
               </tr>
             </thead>
@@ -31,7 +30,6 @@
                   <td><?= h($about->title) ?></td>
                   <td><?= h($about->body) ?></td>
                   <td><?= h($about->photo) ?></td>
-                  <td><?= h($about->created) ?></td>
                   <td class="actions text-right">
 
                       <?= $this->Html->link(__('Editar'), ['action' => 'edit', $about->id], ['class'=>'btn btn-warning btn-xs']) ?>

@@ -36,8 +36,7 @@
                   <th scope="col"><?= $this->Paginator->sort('staff',['label' => 'Cargo']) ?></th>
                   <th scope="col"><?= $this->Paginator->sort('category_id',['label' => 'Categoria']) ?></th>
                   <th scope="col"><?= $this->Paginator->sort('photo',['label' => 'Foto']) ?></th>
-                  <th scope="col"><?= $this->Paginator->sort('body',['label' => 'Texto']) ?></th>
-                  <th scope="col"><?= $this->Paginator->sort('created',['label' => 'Criado em:']) ?></th>
+                  <th scope="col" width="400"><?= $this->Paginator->sort('body',['label' => 'Texto']) ?></th>
                   <th scope="col" class="actions text-center"><?= __('Ações') ?></th>
               </tr>
             </thead>
@@ -49,9 +48,8 @@
                   <td><?= $staff->has('category') ? $this->Html->link($staff->category->name, ['controller' => 'Categories', 'action' => 'view', $staff->category->id]) : '' ?></td>
                   <td><?= h($staff->photo) ?></td>
                   <td><?= h($staff->body) ?></td>
-                  <td><?= h($staff->created) ?></td>
                   <td class="actions text-right">
-                      <?= $this->Html->link(__('Listar'), ['action' => 'view', $staff->id], ['class'=>'btn btn-info btn-xs']) ?>
+                      <?= $this->Html->link(__('Detalhes'), ['action' => 'view', $staff->id], ['class'=>'btn btn-info btn-xs']) ?>
                       <?= $this->Html->link(__('Editar'), ['action' => 'edit', $staff->id], ['class'=>'btn btn-warning btn-xs']) ?>
                       <?= $this->Form->postLink(__('Excluir'), ['action' => 'delete', $staff->id], ['confirm' => __('Tem certeza que deseja excluir # {0}?', $staff->staff), 'class'=>'btn btn-danger btn-xs']) ?>
                   </td>

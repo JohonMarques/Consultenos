@@ -7,8 +7,8 @@
     <?php echo $this->Form->create(); ?>
     <div class="box-body">
         <?php
-        echo $this->Form->control('username');
-        echo $this->Form->control('password');
+        echo $this->Form->control('username',['label' => 'Usuario']);
+        echo $this->Form->control('password',['label' => 'Senha']);
         ?>
         <div style="margin: 0 auto;display: block; text-align: center">
         <?php echo $this->Form->button(__('Entrar')); ?>
