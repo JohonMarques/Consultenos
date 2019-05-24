@@ -4,20 +4,10 @@ namespace App\Controller;
 use App\Controller\AppController;
 use Cake\Event\Event;
 
-/**
- * StaffPosts Controller
- *
- * @property \App\Model\Table\StaffPostsTable $StaffPosts
- *
- * @method \App\Model\Entity\StaffPost[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
- */
+
 class StaffPostsController extends AppController
 {
-    /**
-     * Index method
-     *
-     * @return \Cake\Http\Response|void
-     */
+
     public function index()
     {
         $this->paginate = [
@@ -28,13 +18,6 @@ class StaffPostsController extends AppController
         $this->set(compact('staffPosts'));
     }
 
-    /**
-     * View method
-     *
-     * @param string|null $id Staff Post id.
-     * @return \Cake\Http\Response|void
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
     public function view($id = null)
     {
         $staffPost = $this->StaffPosts->get($id, [
@@ -45,35 +28,25 @@ class StaffPostsController extends AppController
     }
 
 
-    /**
-     * Add method
-     *
-     * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
-     */
+
     public function add()
     {
         $staffPost = $this->StaffPosts->newEntity();
         if ($this->request->is('post')) {
             $staffPost = $this->StaffPosts->patchEntity($staffPost, $this->request->getData());
             if ($this->StaffPosts->save($staffPost)) {
-                $this->Flash->success(__('The {0} has been saved.', 'Staff Post'));
+                $this->Flash->success(__('O Post: {0} foi salvo com sucesso', $staffPost->title));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The {0} could not be saved. Please, try again.', 'Staff Post'));
+            $this->Flash->error(__('O Post: {0} Nao pode ser salvo,tente novamente', $staffPost->title));
         }
         $staffs = $this->StaffPosts->Staffs->find('list', ['limit' => 200]);
         $this->set(compact('staffPost', 'staffs'));
     }
 
 
-    /**
-     * Edit method
-     *
-     * @param string|null $id Staff Post id.
-     * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
-     * @throws \Cake\Network\Exception\NotFoundException When record not found.
-     */
+
     public function edit($id = null)
     {
         $staffPost = $this->StaffPosts->get($id, [
@@ -82,32 +55,26 @@ class StaffPostsController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $staffPost = $this->StaffPosts->patchEntity($staffPost, $this->request->getData());
             if ($this->StaffPosts->save($staffPost)) {
-                $this->Flash->success(__('The {0} has been saved.', 'Staff Post'));
+                $this->Flash->success(__('O Post: {0} foi alterado com sucesso', $staffPost->title));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The {0} could not be saved. Please, try again.', 'Staff Post'));
+            $this->Flash->error(__('O Post: {0} Nao pode ser alterado,tente novamente', $staffPost->title));
         }
         $staffs = $this->StaffPosts->Staffs->find('list', ['limit' => 200]);
         $this->set(compact('staffPost', 'staffs'));
     }
 
 
-    /**
-     * Delete method
-     *
-     * @param string|null $id Staff Post id.
-     * @return \Cake\Http\Response|null Redirects to index.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
+
     public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
         $staffPost = $this->StaffPosts->get($id);
         if ($this->StaffPosts->delete($staffPost)) {
-            $this->Flash->success(__('The {0} has been deleted.', 'Staff Post'));
+            $this->Flash->success(__('O Post: {0} foi excluido com sucesso', $staffPost->title));
         } else {
-            $this->Flash->error(__('The {0} could not be deleted. Please, try again.', 'Staff Post'));
+            $this->Flash->error(__('O Post: {0} Nao pode ser excluido,tente novamente', $staffPost->title));
         }
 
         return $this->redirect(['action' => 'index']);

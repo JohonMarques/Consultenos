@@ -3,20 +3,10 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 
-/**
- * About Controller
- *
- * @property \App\Model\Table\AboutTable $About
- *
- * @method \App\Model\Entity\About[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
- */
+
 class AboutController extends AppController
 {
-    /**
-     * Index method
-     *
-     * @return \Cake\Http\Response|void
-     */
+
     public function index()
     {
         $about = $this->paginate($this->About);
@@ -24,13 +14,6 @@ class AboutController extends AppController
         $this->set(compact('about'));
     }
 
-    /**
-     * View method
-     *
-     * @param string|null $id About id.
-     * @return \Cake\Http\Response|void
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
     public function view($id = null)
     {
         $about = $this->About->get($id, [
@@ -41,34 +24,23 @@ class AboutController extends AppController
     }
 
 
-    /**
-     * Add method
-     *
-     * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
-     */
     public function add()
     {
         $about = $this->About->newEntity();
         if ($this->request->is('post')) {
             $about = $this->About->patchEntity($about, $this->request->getData());
             if ($this->About->save($about)) {
-                $this->Flash->success(__('The {0} has been saved.', 'About'));
+                $this->Flash->success(__('A informação de: {0} foi salva', $about->title));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The {0} could not be saved. Please, try again.', 'About'));
+            $this->Flash->error(__('A informação de: {0} nao pode ser salva, tente novamente', $about->title));
         }
         $this->set(compact('about'));
     }
 
 
-    /**
-     * Edit method
-     *
-     * @param string|null $id About id.
-     * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
-     * @throws \Cake\Network\Exception\NotFoundException When record not found.
-     */
+
     public function edit($id = null)
     {
         $about = $this->About->get($id, [
@@ -77,31 +49,24 @@ class AboutController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $about = $this->About->patchEntity($about, $this->request->getData());
             if ($this->About->save($about)) {
-                $this->Flash->success(__('The {0} has been saved.', 'About'));
+                $this->Flash->success(__('A informação de: {0} foi alterada', $about->title));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The {0} could not be saved. Please, try again.', 'About'));
+            $this->Flash->error(__('A informação de: {0} nao pode ser alterada, tente novamente', $about->title));
         }
         $this->set(compact('about'));
     }
 
 
-    /**
-     * Delete method
-     *
-     * @param string|null $id About id.
-     * @return \Cake\Http\Response|null Redirects to index.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
     public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
         $about = $this->About->get($id);
         if ($this->About->delete($about)) {
-            $this->Flash->success(__('The {0} has been deleted.', 'About'));
+            $this->Flash->success(__('A informação de: {0} foi excluida', $about->title));
         } else {
-            $this->Flash->error(__('The {0} could not be deleted. Please, try again.', 'About'));
+            $this->Flash->error(__('A informação de: {0} nao pode ser excluida, tente novamente', $about->title));
         }
 
         return $this->redirect(['action' => 'index']);

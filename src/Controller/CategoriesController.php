@@ -3,20 +3,10 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 
-/**
- * Categories Controller
- *
- * @property \App\Model\Table\CategoriesTable $Categories
- *
- * @method \App\Model\Entity\Category[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
- */
+
 class CategoriesController extends AppController
 {
-    /**
-     * Index method
-     *
-     * @return \Cake\Http\Response|void
-     */
+
     public function index()
     {
         $categories = $this->paginate($this->Categories);
@@ -40,11 +30,11 @@ class CategoriesController extends AppController
         if ($this->request->is('post')) {
             $category = $this->Categories->patchEntity($category, $this->request->getData());
             if ($this->Categories->save($category)) {
-                $this->Flash->success(__('The {0} has been saved.', 'Category'));
+                $this->Flash->success(__('A categoria {0} foi salva', $category->name));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The {0} could not be saved. Please, try again.', 'Category'));
+            $this->Flash->error(__('A Categoria: {0} nao pode ser salva. Tente Novamente', $category->name));
         }
         $this->set(compact('category'));
     }
@@ -58,11 +48,11 @@ class CategoriesController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $category = $this->Categories->patchEntity($category, $this->request->getData());
             if ($this->Categories->save($category)) {
-                $this->Flash->success(__('The {0} has been saved.', 'Category'));
+                $this->Flash->success(__('A categoria {0} foi alterada', $category->name));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The {0} could not be saved. Please, try again.', 'Category'));
+            $this->Flash->error(__('A Categoria: {0} nao pode ser alterada. Tente Novamente', $category->name));
         }
         $this->set(compact('category'));
     }
@@ -74,9 +64,9 @@ class CategoriesController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $category = $this->Categories->get($id);
         if ($this->Categories->delete($category)) {
-            $this->Flash->success(__('The {0} has been deleted.', 'Category'));
+            $this->Flash->success(__('A categoria {0} foi excluida', $category->name));
         } else {
-            $this->Flash->error(__('The {0} could not be deleted. Please, try again.', 'Category'));
+            $this->Flash->error(__('A Categoria: {0} nao pode ser excluida. Tente Novamente', $category->name));
         }
 
         return $this->redirect(['action' => 'index']);

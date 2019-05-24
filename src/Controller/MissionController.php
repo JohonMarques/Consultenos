@@ -32,11 +32,11 @@ class MissionController extends AppController
         if ($this->request->is('post')) {
             $mission = $this->Mission->patchEntity($mission, $this->request->getData());
             if ($this->Mission->save($mission)) {
-                $this->Flash->success(__('The {0} has been saved.', 'Mission'));
+                $this->Flash->success(__('A informação de:  {0} foi salva', $mission->title));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The {0} could not be saved. Please, try again.', 'Mission'));
+            $this->Flash->error(__('A informação de:  {0} nao pode ser salva', $mission->title));
         }
         $this->set(compact('mission'));
 
@@ -53,11 +53,11 @@ class MissionController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $mission = $this->Mission->patchEntity($mission, $this->request->getData());
             if ($this->Mission->save($mission)) {
-                $this->Flash->success(__('The {0} has been saved.', 'Mission'));
+                $this->Flash->success(__('A informação de:  {0} foi alterada', $mission->title));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The {0} could not be saved. Please, try again.', 'Mission'));
+            $this->Flash->error(__('A informação de:  {0} nao pode ser alterada', $mission->title));
         }
         $this->set(compact('mission'));
     }
@@ -69,9 +69,9 @@ class MissionController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $mission = $this->Mission->get($id);
         if ($this->Mission->delete($mission)) {
-            $this->Flash->success(__('The {0} has been deleted.', 'Mission'));
+            $this->Flash->success(__('A informação de:  {0} foi excluida', $mission->title));
         } else {
-            $this->Flash->error(__('The {0} could not be deleted. Please, try again.', 'Mission'));
+            $this->Flash->error(__('A informação de:  {0} nao pode ser excluida', $mission->title));
         }
 
         return $this->redirect(['action' => 'index']);
