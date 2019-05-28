@@ -1,9 +1,9 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    Users
+    Usuarios
 
-    <div class="pull-right"><?php echo $this->Html->link(__('New'), ['action' => 'add'], ['class'=>'btn btn-success btn-xs']) ?></div>
+    <div class="pull-right"><?php echo $this->Html->link(__('Novo'), ['action' => 'add'], ['class'=>'btn btn-success btn-xs']) ?></div>
   </h1>
 </section>
 
@@ -12,35 +12,18 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="box">
-        <div class="box-header">
-          <h3 class="box-title"><?php echo __('List'); ?></h3>
-
-          <div class="box-tools">
-            <form action="<?php echo $this->Url->build(); ?>" method="POST">
-              <div class="input-group input-group-sm" style="width: 150px;">
-                <input type="text" name="table_search" class="form-control pull-right" placeholder="<?php echo __('Search'); ?>">
-
-                <div class="input-group-btn">
-                  <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
         <!-- /.box-header -->
         <div class="box-body table-responsive no-padding">
           <table class="table table-hover">
             <thead>
               <tr>
                   <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                  <th scope="col"><?= $this->Paginator->sort('role_id') ?></th>
-                  <th scope="col"><?= $this->Paginator->sort('created') ?></th>
-                  <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
-                  <th scope="col"><?= $this->Paginator->sort('name') ?></th>
-                  <th scope="col"><?= $this->Paginator->sort('username') ?></th>
-                  <th scope="col"><?= $this->Paginator->sort('email') ?></th>
-                  <th scope="col"><?= $this->Paginator->sort('password') ?></th>
-                  <th scope="col" class="actions text-center"><?= __('Actions') ?></th>
+                  <th scope="col"><?= $this->Paginator->sort('role_id',['label' => ' Permissão']) ?></th>
+                  <th scope="col"><?= $this->Paginator->sort('name',['label' => ' Nome']) ?></th>
+                  <th scope="col"><?= $this->Paginator->sort('username',['label' => ' Usuario']) ?></th>
+                  <th scope="col"><?= $this->Paginator->sort('email',['label' => ' Email']) ?></th>
+                  <th scope="col"><?= $this->Paginator->sort('password',['label' => ' Senha']) ?></th>
+                  <th scope="col" class="actions text-center"><?= __('Ações') ?></th>
               </tr>
             </thead>
             <tbody>
@@ -48,16 +31,14 @@
                 <tr>
                   <td><?= $this->Number->format($user->id) ?></td>
                   <td><?= $user->has('role') ? $this->Html->link($user->role->role, ['controller' => 'Roles', 'action' => 'view', $user->role->id]) : '' ?></td>
-                  <td><?= h($user->created) ?></td>
-                  <td><?= h($user->modified) ?></td>
                   <td><?= h($user->name) ?></td>
                   <td><?= h($user->username) ?></td>
                   <td><?= h($user->email) ?></td>
                   <td><?= h($user->password) ?></td>
                   <td class="actions text-right">
-                      <?= $this->Html->link(__('View'), ['action' => 'view', $user->id], ['class'=>'btn btn-info btn-xs']) ?>
-                      <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id], ['class'=>'btn btn-warning btn-xs']) ?>
-                      <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id), 'class'=>'btn btn-danger btn-xs']) ?>
+                      <?= $this->Html->link(__('Detalhes'), ['action' => 'view', $user->id], ['class'=>'btn btn-info btn-xs']) ?>
+                      <?= $this->Html->link(__('Editar'), ['action' => 'edit', $user->id], ['class'=>'btn btn-warning btn-xs']) ?>
+                      <?= $this->Form->postLink(__('Excluir'), ['action' => 'delete', $user->id], ['confirm' => __('Tem certeza que deseja excluir o usuario:  # {0}?', $user->name), 'class'=>'btn btn-danger btn-xs']) ?>
                   </td>
                 </tr>
               <?php endforeach; ?>

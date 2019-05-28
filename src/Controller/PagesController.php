@@ -20,25 +20,11 @@ use Cake\Http\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
 use Cake\Event\Event;
 
-/**
- * Static content controller
- *
- * This controller will render views from Template/Pages/
- *
- * @link https://book.cakephp.org/3.0/en/controllers/pages-controller.html
- */
+
 class PagesController extends AppController
 {
 
-    /**
-     * Displays a view
-     *
-     * @param array ...$path Path segments.
-     * @return \Cake\Http\Response|null
-     * @throws \Cake\Http\Exception\ForbiddenException When a directory traversal attempt.
-     * @throws \Cake\Http\Exception\NotFoundException When the view file could not
-     *   be found or \Cake\View\Exception\MissingTemplateException in debug mode.
-     */
+
     public function display(...$path)
     {
         $count = count($path);
@@ -69,14 +55,7 @@ class PagesController extends AppController
     }
     public function site(){
         $this->viewBuilder()->setLayout('site');
-        $this->loadModel('Banners');
-        $this->loadModel('Rooms');
-        $this->loadModel('PhotosRooms');
-        $this->loadModel('Galleries');
-        $this->loadModel('Comments');
-        $this->loadModel('Videos');
-        $this->loadModel('Blogs');
-        $this->loadModel('StaffPosts');
+
         $this->loadModel('Mission');
         $this->loadModel('Teams');
         $this->loadModel('Trainings');
@@ -84,13 +63,7 @@ class PagesController extends AppController
 
 
 
-        $banners = $this->Banners->find('all');
-        $rooms = $this->Rooms->find('all');
-        $images = $this->PhotosRooms->find('all');
-        $galleries = $this->Galleries->find('all', array('limit' =>9))->order(['id'=>'desc']);
-        $comments = $this->Comments->find('all');
-        $videos = $this->Videos->find('all', array('limit' =>1));
-        $blogs = $this->Blogs->find('all', array('limit' =>3))->order(['id'=>'desc']);
+
         $mission = $this->Mission->find('all')->first();
         $teams = $this->Teams->find('all', array('limit' =>3))->order(['id'=>'desc']);
         $trainings = $this->Trainings->find('all', array('limit' =>3))->order(['id'=>'desc']);
@@ -98,13 +71,7 @@ class PagesController extends AppController
 
 
 
-        $this->set('images', $images);
-        $this->set('galleries', $galleries);
-        $this->set('banners', $banners);
-        $this->set('rooms', $rooms);
-        $this->set('comments', $comments);
-        $this->set('videos', $videos);
-        $this->set('blogs', $blogs);
+
         $this->set('mission', $mission);
         $this->set('teams', $teams);
         $this->set('trainings', $trainings);

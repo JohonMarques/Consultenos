@@ -31,6 +31,7 @@
               <?php
                 echo $this->Form->control('name', ['label' => 'Nome']);
                 echo $this->Form->control('cargo', ['label' => 'Cargo']);
+                echo $this->Form->control('resumo', ['label' => 'Resumo']);
                 echo $this->Form->control('body', ['label' => 'Texto']);
                 echo $this->Form->control('photo',['type' => 'file', 'label' => 'Imagem']);
               ?>

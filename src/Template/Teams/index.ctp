@@ -20,6 +20,7 @@
                   <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                   <th scope="col"><?= $this->Paginator->sort('name', ['label' => 'Nome']) ?></th>
                   <th scope="col"><?= $this->Paginator->sort('cargo', ['label' => 'Cargo']) ?></th>
+                  <th scope="col"><?= $this->Paginator->sort('resumo', ['label' => 'Resumo']) ?></th>
                   <th scope="col"><?= $this->Paginator->sort('body', ['label' => 'Texto']) ?></th>
                   <th scope="col"><?= $this->Paginator->sort('photo', ['label' => 'Foto']) ?></th>
                   <th scope="col" class="actions text-center"><?= __('Ações') ?></th>
@@ -31,6 +32,7 @@
                   <td><?= $this->Number->format($team->id) ?></td>
                   <td><?= h($team->name) ?></td>
                   <td><?= h($team->cargo) ?></td>
+                  <td><?= h($team->resumo) ?></td>
                   <td><?= h($team->body) ?></td>
                   <td><?= h($team->photo) ?></td>
                   <td class="actions text-right">

@@ -76,6 +76,12 @@ class TeamsTable extends Table
             ->allowEmptyString('cargo', false);
 
         $validator
+            ->scalar('resumo')
+            ->maxLength('cargo', 255)
+            ->requirePresence('resumo', 'create')
+            ->allowEmptyString('resumo', false);
+
+        $validator
             ->scalar('body')
             ->requirePresence('body', 'create')
             ->allowEmptyString('body', false);

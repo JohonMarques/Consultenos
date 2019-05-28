@@ -24,6 +24,8 @@
             <dd><?= h($team->name) ?></dd>
             <dt scope="row">Cargo</dt>
             <dd><?= h($team->cargo) ?></dd>
+              <dt scope="row">Resumo</dt>
+              <dd><?= h($team->resumo) ?></dd>
             <dt scope="row">Foto</dt>
             <dd><?= h($team->photo) ?></dd>
             <dt scope="row">Id</dt>

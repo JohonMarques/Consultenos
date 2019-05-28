@@ -6,8 +6,8 @@
 <div class="eltdf-content">
     <div class="eltdf-content-inner">
         <div class="eltdf-title-holder eltdf-centered-type eltdf-title-va-header-bottom eltdf-preload-background eltdf-has-bg-image eltdf-bg-parallax"
-            style="height: 551px;background-image:url(/images/team-parallax-1.jpg);"
-            data-height="551">
+             style="height: 551px;background-image:url(/images/team-parallax-1.jpg);"
+             data-height="551">
             <div class="eltdf-title-image">
                 <img itemprop="image"
                      src="/images/team-parallax-1.jpg" alt="a"/>
@@ -64,7 +64,7 @@
                                                                                 <h5 class="eltdf-team-name"><?php echo $team->name ?></h5>
                                                                                 <h6 class="eltdf-team-position">
                                                                                     <?php echo $team->cargo ?> </h6>
-                                                                                <p class="eltdf-team-text"><?php echo substr($team->body, 0, 232) ?></p>
+                                                                                <p class="eltdf-team-text"><?php echo $team->body ?></p>
                                                                                 <div class="eltdf-team-social-holder">
 											<span class="eltdf-team-icon">    <span
                                                         class="eltdf-icon-shortcode eltdf-normal   ">
@@ -92,6 +92,7 @@
                                                                          style="height: 87px"><span
                                                                                 class="vc_empty_space_inner"></span>
                                                                     </div>
+
                                                                 </div>
                                                             </div>
                                                         </div>

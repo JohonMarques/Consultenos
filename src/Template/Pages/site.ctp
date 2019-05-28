@@ -744,7 +744,7 @@
                                         <div class="eltdf-section-title-holder  eltdf-st-standard eltdf-st-title-left eltdf-st-normal-space ">
                                             <div class="eltdf-st-inner">
                                                 <h2 class="eltdf-st-title">
-                                                    <?php echo $mission->title ?>          </h2>
+                                                    Nossa Missão         </h2>
                                                 <div class="eltdf-separator-holder clearfix">
                                                     <div class="eltdf-separator"></div>
                                                 </div>
@@ -763,10 +763,6 @@
                                                                      class="attachment-full size-full" alt="a"
                                                                      srcset="<?= "/files/Mission/photo/" . $mission->photo ?> 800w, <?= "/files/Mission/photo/" . $mission->photo ?> 600w, <?= "/files/Mission/photo/" . $mission->photo ?> 300w, <?= "/files/Mission/photo/" . $mission->photo ?> 768w"
                                                                      sizes="(max-width: 800px) 100vw, 800px"/></div>
-
-                                                            <a itemprop="url" href="#" target="_self"
-                                                               class="eltdf-banner-link"></a>
-
                                                         </div>
                                                         <div class="vc_empty_space" style="height: 40px"><span
                                                                     class="vc_empty_space_inner"></span></div>
@@ -922,7 +918,7 @@
                                                                         <h5 class="eltdf-team-name"><?php echo $team->name ?></h5>
                                                                     </a>
                                                                     <h6 class="eltdf-team-position"><?php echo $team->cargo ?></h6>
-                                                                    <p class="eltdf-team-text"><?php echo substr($team->body,0,232)  ?></p>
+                                                                    <p class="eltdf-team-text"><?php echo $team->resumo  ?></p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -952,10 +948,10 @@
                                     <figure class="wpb_wrapper vc_figure">
                                         <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="426"
                                                                                                        height="300"
-                                                                                                       src="images/h1-img-1.png"
+                                                                                                       src="images/logoqs.png"
                                                                                                        class="vc_single_image-img attachment-full"
                                                                                                        alt="a"
-                                                                                                       srcset="images/h1-img-1.png 426w, images/h1-img-1-300x211.png 300w"
+                                                                                                       srcset="images/logoqs.png 426w, images/logoqs.png 300w"
                                                                                                        sizes="(max-width: 426px) 100vw, 426px"/>
                                         </div>
                                     </figure>
@@ -1106,7 +1102,7 @@
                                             </a>
                                         </div>
                                         <div class="eltdf-cc-item">
-                                            <a itemprop="url" class="eltdf-cc-link eltdf-block-drag-link" href="#"
+                                            <a itemprop="url" class="eltdf-cc-link eltdf-block-drag-link" href="/"
                                                target="_self">
                                                 <img itemprop="image" class="eltdf-cc-image"
                                                      src="images/client-hover-2.png" alt="a"/>
