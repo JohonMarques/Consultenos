@@ -576,8 +576,8 @@
                                     <div class="wpb_wrapper">
                                         <div class="eltdf-section-title-holder  eltdf-st-standard eltdf-st-title-left eltdf-st-normal-space ">
                                             <div class="eltdf-st-inner">
-                                                <h2 class="eltdf-st-title" style="font-size: 26px">
-                                                 Treino personalizado </h2>
+                                                <h2 class="eltdf-st-title" style="font-size: 24px">
+                                                 Treinamento Personalizado </h2>
                                                 <div class="eltdf-separator-holder clearfix">
                                                     <div class="eltdf-separator"></div>
                                                 </div>
@@ -787,8 +787,8 @@
                                                                          style="padding: 0 15% 60px 0">
                                                                         <div class="eltdf-pricing-item-holder ">
 
-                                                                            <div class="eltdf-text-holder">
-                                                                                <p class="eltdf-text" style="font-size: 20px"><?php echo $mission->body ?> </p>
+                                                                            <div class="eltdf-text-holder" style="font-size: 20px">
+                                                                                <p class="eltdf-text" ><?php echo $mission->body ?> </p>
                                                                             </div>
                                                                         </div>
                                                                     </div>

@@ -27,3 +27,14 @@
     </div>
 </div>
 
+<script src="https://www.google.com/recaptcha/api.js?render=6Lf3HqQUAAAAALnpml1f9FdqFb9M0_cFI5er9mH8"></script>
+<script>
+    grecaptcha.ready(function () {
+        grecaptcha.execute('6Lf3HqQUAAAAALnpml1f9FdqFb9M0_cFI5er9mH8', { action: 'contact' }).then(function (token) {
+            var recaptchaResponse = document.getElementById('g-recaptcha-response');
+            recaptchaResponse.value = token;
+
+        });
+    });
+</script>
+

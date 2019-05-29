@@ -79,9 +79,9 @@
     <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress." />
     <!--[if lte IE 9]><![endif]-->
     <meta name="generator" content="Powered by Slider Revolution 5.4.6.4 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
-    <link rel="icon" href="images/ico-32.svg" sizes="32x32" />
+    <link rel="shortcut icon" href="/images/favicon.ico" sizes="32x32" type="image/vnd.microsoft.icon" />
     <link rel="icon" href="images/ico-192.svg" sizes="192x192" />
-    <link rel="apple-touch-icon-precomposed" href="images/ico-192.svg" />
+    <link rel="apple-touch-icon" href="images/favicon.ico" />
     <meta name="msapplication-TileImage" content="images/ico-192.svg" />
 
     <style type="text/css" id="wp-custom-css">

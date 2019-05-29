@@ -64,7 +64,8 @@
                                                                                 <h5 class="eltdf-team-name"><?php echo $team->name ?></h5>
                                                                                 <h6 class="eltdf-team-position">
                                                                                     <?php echo $team->cargo ?> </h6>
-                                                                                <p class="eltdf-team-text"><?php echo $team->body ?></p>
+                                                                                <p class="eltdf-team-text"
+                                                                                   style="text-align: justify"><?php echo $team->body ?></p>
                                                                                 <div class="eltdf-team-social-holder">
 											<span class="eltdf-team-icon">    <span
                                                         class="eltdf-icon-shortcode eltdf-normal   ">

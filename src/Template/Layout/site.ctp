@@ -79,7 +79,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                                     </li>
                                     <li id="nav-menu-item-551"
                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
-                                        <a href="#" class=""><span class="item_outer"><span
+                                        <a href="" class=""><span class="item_outer"><span
                                                         class="item_text">Serviços</span><i
                                                         class="eltdf-menu-arrow fa fa-angle-down"></i></span></a>
                                         <div class="second">
@@ -89,7 +89,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                                                         <li id="nav-menu-item-1148"
                                                             class="menu-item menu-item-type-custom
                                                         menu-item-object-custom menu-item-has-children sub">
-                                                            <a href="#" class="">
+                                                            <a href="" class="">
                                                             <span class="item_outer">
                                                                 <span class="item_text"><?php echo $category->name ?></span>
                                                             </span>
@@ -125,12 +125,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                                                 <ul>
                                                     <li id="nav-menu-item-559"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page ">
-                                                        <a href="https://gourmand.elated-themes.com/shop/"
+                                                        <a href=""
                                                            class=""><span class="item_outer"><span class="item_text">Product List</span></span></a>
                                                     </li>
                                                     <li id="nav-menu-item-1439"
                                                         class="menu-item menu-item-type-post_type menu-item-object-product ">
-                                                        <a href="https://gourmand.elated-themes.com/product/black-burger/"
+                                                        <a href=""
                                                            class=""><span class="item_outer"><span class="item_text">Product Single</span></span></a>
                                                     </li>
                                                     <li id="nav-menu-item-1260"
@@ -140,31 +140,31 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                                                         <ul>
                                                             <li id="nav-menu-item-1264"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page ">
-                                                                <a href="https://gourmand.elated-themes.com/shop/three-columns-grid/"
+                                                                <a href=""
                                                                    class=""><span class="item_outer"><span
                                                                                 class="item_text">Three Columns Grid</span></span></a>
                                                             </li>
                                                             <li id="nav-menu-item-1265"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page ">
-                                                                <a href="https://gourmand.elated-themes.com/shop/three-columns-wide/"
+                                                                <a href=""
                                                                    class=""><span class="item_outer"><span
                                                                                 class="item_text">Three Columns Wide</span></span></a>
                                                             </li>
                                                             <li id="nav-menu-item-1262"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page ">
-                                                                <a href="https://gourmand.elated-themes.com/shop/four-columns-grid/"
+                                                                <a href=""
                                                                    class=""><span class="item_outer"><span
                                                                                 class="item_text">Four Columns Grid</span></span></a>
                                                             </li>
                                                             <li id="nav-menu-item-1263"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page ">
-                                                                <a href="https://gourmand.elated-themes.com/shop/four-columns-wide/"
+                                                                <a href=""
                                                                    class=""><span class="item_outer"><span
                                                                                 class="item_text">Four Columns Wide</span></span></a>
                                                             </li>
                                                             <li id="nav-menu-item-1261"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page ">
-                                                                <a href="https://gourmand.elated-themes.com/shop/five-columns-wide/"
+                                                                <a href=""
                                                                    class=""><span class="item_outer"><span
                                                                                 class="item_text">Five Columns Wide</span></span></a>
                                                             </li>
@@ -177,19 +177,19 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                                                         <ul>
                                                             <li id="nav-menu-item-1389"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page ">
-                                                                <a href="https://gourmand.elated-themes.com/cart/"
+                                                                <a href=""
                                                                    class=""><span class="item_outer"><span
                                                                                 class="item_text">Cart</span></span></a>
                                                             </li>
                                                             <li id="nav-menu-item-1438"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page ">
-                                                                <a href="https://gourmand.elated-themes.com/my-account/"
+                                                                <a href=""
                                                                    class=""><span class="item_outer"><span
                                                                                 class="item_text">My Account</span></span></a>
                                                             </li>
                                                             <li id="nav-menu-item-1388"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page ">
-                                                                <a href="https://gourmand.elated-themes.com/checkout/"
+                                                                <a href=""
                                                                    class=""><span class="item_outer"><span
                                                                                 class="item_text">Checkout</span></span></a>
                                                             </li>
@@ -241,7 +241,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                             <div class="eltdf-position-left-inner">
 
                                 <div class="eltdf-logo-wrapper">
-                                    <a itemprop="url" href="https://gourmand.elated-themes.com/" style="height: 68px; width: 60px;">
+                                    <a itemprop="url" href="" style="height: 68px; width: 60px;">
                                         <img itemprop="image" class="eltdf-normal-logo" src="/images/brasao.png"
                                              width="336" height="37" alt="logo"/>
                                         <img itemprop="image" class="eltdf-dark-logo" src="/images/brasao.png"
@@ -282,14 +282,14 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                                         </li>
                                         <li id="sticky-nav-menu-item-552"
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
-                                            <a href="#" class=""><span class="item_outer"><span
+                                            <a href="" class=""><span class="item_outer"><span
                                                             class="item_text">Quem Atendemos</span><span class="plus"></span><i
                                                             class="eltdf-menu-arrow fa fa-angle-down"></i></span></a>
 
                                         </li>
                                         <li id="sticky-nav-menu-item-553"
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow">
-                                            <a href="#" class=""><span class="item_outer"><span
+                                            <a href="" class=""><span class="item_outer"><span
                                                             class="item_text">Serviços</span><span class="plus"></span><i
                                                             class="eltdf-menu-arrow fa fa-angle-down"></i></span></a>
                                             <div class="second">
@@ -379,7 +379,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                                     <div class="eltdf-position-center-inner">
 
                                         <div class="eltdf-mobile-logo-wrapper">
-                                            <a itemprop="url" href="#" style="height: 18px">
+                                            <a itemprop="url" href="/" style="height: 18px">
                                                 <img itemprop="image" src="/images/logo-site.png" width="336"
                                                      height="37" alt="Mobile Logo"/>
                                             </a>
