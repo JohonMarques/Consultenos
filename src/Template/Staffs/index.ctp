@@ -32,7 +32,6 @@
           <table class="table table-hover">
             <thead>
               <tr>
-                  <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                   <th scope="col"><?= $this->Paginator->sort('staff',['label' => 'Cargo']) ?></th>
                   <th scope="col"><?= $this->Paginator->sort('category_id',['label' => 'Categoria']) ?></th>
                   <th scope="col"><?= $this->Paginator->sort('photo',['label' => 'Foto']) ?></th>
@@ -43,7 +42,6 @@
             <tbody>
               <?php foreach ($staffs as $staff): ?>
                 <tr>
-                  <td><?= $this->Number->format($staff->id) ?></td>
                   <td><?= h($staff->staff) ?></td>
                   <td><?= $staff->has('category') ? $this->Html->link($staff->category->name, ['controller' => 'Categories', 'action' => 'view', $staff->category->id]) : '' ?></td>
                   <td><?= h($staff->photo) ?></td>

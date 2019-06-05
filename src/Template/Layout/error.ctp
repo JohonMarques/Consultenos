@@ -18,30 +18,41 @@
 <head>
     <?= $this->Html->charset() ?>
     <title>
-        <?= $this->fetch('title') ?>
+        Algo deu errado...
     </title>
-    <?= $this->Html->meta('icon') ?>
+    <link href="/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <link href="/images/favicon.ico" rel="apple-touch-icon" type="image/ico" />
+    <link rel='stylesheet' id='gourmand_elated_google_fonts-css'  href='https://fonts.googleapis.com/css?family=Raleway%3A300%2C400%2C500%2C600%2C700%7CAlex+Brush%3A300%2C400%2C500%2C600%2C700&#038;subset=latin-ext&#038;ver=1.0.0' type='text/css' media='all' />
 
-    <?= $this->Html->css('component.css') ?>
-    <?= $this->Html->css('style.css') ?>
+    <?= $this->Html->css([
+        'site/d8455',
+        'site/rbt-modules',
+    ]) ?>
+
+
 
     <?= $this->fetch('meta') ?>
-    <?= $this->fetch('css') ?>
+
     <?= $this->fetch('script') ?>
 </head>
-<body>
-    <div id="container">
-        <div id="header">
-            <h1><?= __('Alguma coisa deu errado...') ?></h1>
-        </div>
-        <div id="content">
-            <?= $this->Flash->render() ?>
+<body style="background-image: url('/images/error-background-1.jpg')">
 
-            <?= $this->fetch('content') ?>
-        </div>
-        <div id="footer">
-            <?= $this->Html->link(__('Voltar'), 'javascript:history.back()') ?>
+<div class="eltdf-wrapper">
+    <div class="eltdf-wrapper-inner">
+        <div class="eltdf-content" style="margin-top: -94px; text-align: center; background-color: unset ">
+            <div class="eltdf-content-inner">
+                <div class="eltdf-page-not-found">
+                    <?= $this->Flash->render() ?>
+
+                    <?= $this->fetch('content') ?>
+                </div>
+            </div>
         </div>
     </div>
+</div>
+    <div id="footer" style="font-size: 25px">
+        <?= $this->Html->link(__('Voltar'), 'javascript:history.back()') ?>
+    </div>
+
 </body>
 </html>

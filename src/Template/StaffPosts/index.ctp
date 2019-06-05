@@ -32,7 +32,7 @@
           <table class="table table-hover">
             <thead>
               <tr>
-                  <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+
                   <th scope="col"><?= $this->Paginator->sort('staff_id',['label' => 'Cargo']) ?></th>
                   <th scope="col"><?= $this->Paginator->sort('titulo') ?></th>
                   <th scope="col"><?= $this->Paginator->sort('body',['label' => 'Texto']) ?></th>
@@ -43,7 +43,7 @@
             <tbody>
               <?php foreach ($staffPosts as $staffPost): ?>
                 <tr>
-                  <td><?= $this->Number->format($staffPost->id) ?></td>
+
                   <td><?= $staffPost->has('staff') ? $this->Html->link($staffPost->staff->staff, ['controller' => 'Staffs', 'action' => 'view', $staffPost->staff->id]) : '' ?></td>
                   <td><?= h($staffPost->titulo) ?></td>
                     <td><?= h($staffPost->body) ?></td>
@@ -59,6 +59,11 @@
           </table>
         </div>
         <!-- /.box-body -->
+          <div class="box-footer clearfix">
+              <ul class="pagination pagination-sm no-margin pull-right">
+                  <?php echo $this->Paginator->numbers(); ?>
+              </ul>
+          </div>
       </div>
       <!-- /.box -->
     </div>

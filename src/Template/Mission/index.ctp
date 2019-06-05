@@ -25,18 +25,15 @@
           <table class="table table-hover">
             <thead>
               <tr>
-                  <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                   <th scope="col"><?= $this->Paginator->sort('title', ['label' => 'Titulo']) ?></th>
                   <th scope="col"><?= $this->Paginator->sort('body', ['label' => 'Texto']) ?></th>
                   <th scope="col"><?= $this->Paginator->sort('photo', ['label' => 'Foto']) ?></th>
-
                   <th scope="col" class="actions text-center"><?= __('Ações') ?></th>
               </tr>
             </thead>
             <tbody>
               <?php foreach ($mission as $mission): ?>
                 <tr>
-                  <td><?= $this->Number->format($mission->id) ?></td>
                   <td><?= h($mission->title) ?></td>
                   <td><?= ($mission->body) ?></td>
                   <td><?= h($mission->photo) ?></td>

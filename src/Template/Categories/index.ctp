@@ -26,7 +26,6 @@
           <table class="table table-hover">
             <thead>
               <tr>
-                  <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                   <th scope="col"><?= $this->Paginator->sort('name',['label' => 'Nome']) ?></th>
                   <th scope="col"><?= $this->Paginator->sort('created',['label' => 'Criado em:']) ?></th>
                   <th scope="col"><?= $this->Paginator->sort('modified',['label' => 'Modificado em:']) ?></th>
@@ -36,7 +35,6 @@
             <tbody>
               <?php foreach ($categories as $category): ?>
                 <tr>
-                  <td><?= $this->Number->format($category->id) ?></td>
                   <td><?= h($category->name) ?></td>
                   <td><?= h($category->created) ?></td>
                   <td><?= h($category->modified) ?></td>

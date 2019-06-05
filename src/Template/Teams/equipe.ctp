@@ -37,7 +37,7 @@
                                                 <div class="eltdf-section-title-holder  eltdf-st-standard eltdf-st-title-left eltdf-st-normal-space ">
                                                     <div class="eltdf-st-inner">
                                                         <h2 class="eltdf-st-title">
-                                                            Equipe </h2>
+                                                            Mestres </h2>
                                                         <div class="eltdf-separator-holder clearfix">
                                                             <div class="eltdf-separator"></div>
                                                         </div>
@@ -66,26 +66,26 @@
                                                                                     <?php echo $team->cargo ?> </h6>
                                                                                 <p class="eltdf-team-text"
                                                                                    style="text-align: justify"><?php echo $team->body ?></p>
-                                                                                <div class="eltdf-team-social-holder">
-											<span class="eltdf-team-icon">    <span
-                                                        class="eltdf-icon-shortcode eltdf-normal   ">
-                    <a class="" href="http://facebook.com" target="_blank">
-                    <span class="eltdf-icon-font-elegant social_facebook eltdf-icon-element"></span>                    </a>
-            </span>
-</span>
-                                                                                    <span class="eltdf-team-icon">    <span
-                                                                                                class="eltdf-icon-shortcode eltdf-normal   ">
-                    <a class="" href="http://twitter.com" target="_blank">
-                    <span class="eltdf-icon-font-elegant social_twitter eltdf-icon-element"></span>                    </a>
-            </span>
-</span>
-                                                                                    <span class="eltdf-team-icon">    <span
-                                                                                                class="eltdf-icon-shortcode eltdf-normal   ">
-                    <a class="" href="http://linkedin.com" target="_blank">
-                    <span class="eltdf-icon-font-elegant social_linkedin eltdf-icon-element"></span>                    </a>
-            </span>
-</span>
-                                                                                </div>
+<!--                                                                                <div class="eltdf-team-social-holder">-->
+<!--											<span class="eltdf-team-icon">    <span-->
+<!--                                                        class="eltdf-icon-shortcode eltdf-normal   ">-->
+<!--                    <a class="" href="http://facebook.com" target="_blank">-->
+<!--                    <span class="eltdf-icon-font-elegant social_facebook eltdf-icon-element"></span>                    </a>-->
+<!--            </span>-->
+<!--</span>-->
+<!--                                                                                    <span class="eltdf-team-icon">    <span-->
+<!--                                                                                                class="eltdf-icon-shortcode eltdf-normal   ">-->
+<!--                    <a class="" href="http://twitter.com" target="_blank">-->
+<!--                    <span class="eltdf-icon-font-elegant social_twitter eltdf-icon-element"></span>                    </a>-->
+<!--            </span>-->
+<!--</span>-->
+<!--                                                                                    <span class="eltdf-team-icon">    <span-->
+<!--                                                                                                class="eltdf-icon-shortcode eltdf-normal   ">-->
+<!--                    <a class="" href="http://linkedin.com" target="_blank">-->
+<!--                    <span class="eltdf-icon-font-elegant social_linkedin eltdf-icon-element"></span>                    </a>-->
+<!--            </span>-->
+<!--</span>-->
+<!--                                                                                </div>-->
                                                                             </div>
                                                                         </div>
                                                                     </div>

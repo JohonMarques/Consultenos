@@ -23,7 +23,6 @@
           <table class="table table-hover">
             <thead>
               <tr>
-                  <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                   <th scope="col"><?= $this->Paginator->sort('title', ['label' => 'Titulo']) ?></th>
                   <th scope="col"><?= $this->Paginator->sort('body', ['label' => 'Texto']) ?></th>
                   <th scope="col"><?= $this->Paginator->sort('photo', ['label' => 'Foto']) ?></th>
@@ -33,7 +32,6 @@
             <tbody>
               <?php foreach ($trainings as $training): ?>
                 <tr>
-                  <td><?= $this->Number->format($training->id) ?></td>
                   <td><?= h($training->title) ?></td>
                   <td><?= h($training->body) ?></td>
                   <td><?= h($training->photo) ?></td>
@@ -48,6 +46,11 @@
           </table>
         </div>
         <!-- /.box-body -->
+          <div class="box-footer clearfix">
+              <ul class="pagination pagination-sm no-margin pull-right">
+                  <?php echo $this->Paginator->numbers(); ?>
+              </ul>
+          </div>
       </div>
       <!-- /.box -->
     </div>

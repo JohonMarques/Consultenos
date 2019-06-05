@@ -17,7 +17,7 @@
           <table class="table table-hover">
             <thead>
               <tr>
-                  <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+
                   <th scope="col"><?= $this->Paginator->sort('name', ['label' => 'Nome']) ?></th>
                   <th scope="col"><?= $this->Paginator->sort('cargo', ['label' => 'Cargo']) ?></th>
                   <th scope="col"><?= $this->Paginator->sort('resumo', ['label' => 'Resumo']) ?></th>
@@ -29,7 +29,6 @@
             <tbody>
               <?php foreach ($teams as $team): ?>
                 <tr>
-                  <td><?= $this->Number->format($team->id) ?></td>
                   <td><?= h($team->name) ?></td>
                   <td><?= h($team->cargo) ?></td>
                   <td><?= h($team->resumo) ?></td>
@@ -46,6 +45,11 @@
           </table>
         </div>
         <!-- /.box-body -->
+          <div class="box-footer clearfix">
+              <ul class="pagination pagination-sm no-margin pull-right">
+                  <?php echo $this->Paginator->numbers(); ?>
+              </ul>
+          </div>
       </div>
       <!-- /.box -->
     </div>

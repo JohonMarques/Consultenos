@@ -11,7 +11,8 @@ class StaffPostsController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Staffs']
+            'contain' => ['Staffs'],
+            'limit' => 4
         ];
         $staffPosts = $this->paginate($this->StaffPosts);
 

@@ -10,6 +10,11 @@ class TeamsController extends AppController
 
     public function index()
     {
+
+        $this->paginate = [
+            'limit' => 5
+        ];
+
         $teams = $this->paginate($this->Teams);
 
         $this->set(compact('teams'));
@@ -51,11 +56,11 @@ class TeamsController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $team = $this->Teams->patchEntity($team, $this->request->getData());
             if ($this->Teams->save($team)) {
-                $this->Flash->success(__('O funcionaro: {0} foi alterado com sucesso', $team->name));
+                $this->Flash->success(__('O funcionario: {0} foi alterado com sucesso', $team->name));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('O funcionaro: {0} nao pode ser alterado. Por Favor tente novamente.', $team->name));
+            $this->Flash->error(__('O funcionario: {0} nao pode ser alterado. Por Favor tente novamente.', $team->name));
         }
         $this->set(compact('team'));
     }
@@ -67,9 +72,9 @@ class TeamsController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $team = $this->Teams->get($id);
         if ($this->Teams->delete($team)) {
-            $this->Flash->success(__('O funcionaro: {0} foi excluido com sucesso', $team->name));
+            $this->Flash->success(__('O funcionario: {0} foi excluido com sucesso', $team->name));
         } else {
-            $this->Flash->error(__('O funcionaro: {0} nao pode ser excluido. Por Favor tente novamente.', $team->name));
+            $this->Flash->error(__('O funcionario: {0} nao pode ser excluido. Por Favor tente novamente.', $team->name));
         }
 
         return $this->redirect(['action' => 'index']);
